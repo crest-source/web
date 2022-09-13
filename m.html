@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FRESHLY MADE WEB</title>
+
+        <link rel="stylesheet" type="text/css" href="m.css">
+         <meta http-equiv="refresh" content="">
+
+    </head>
+    <body>
+
+        <div id="mine">
+            <div class="navbar">
+            <img src="4.jpg", class="logo">
+            <div class="user">
+                <button type="button"> Explore </button>
+                <img src="15.jpg">
+            </div>
+</div>
+
+<div class="sweep">
+    <div class="sweet">
+        <h1> DISCOVER </h1>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque assumenda numquam sed, voluptate molestiae sequi explicabo <br> quos qui a reiciendis veritatis officiis nihil quis cupiditate mollitia maxime quidem. Sequi, non!</p>
+        <input type="text" placeholder="search">
+    </div>
+</div>
+
+    <div class="slides">
+        <img src="road.jpg" id="prev">
+        <div class="preview">
+            <img src="we.jpg" class="active thumbnail">
+            <img src="23.jpg" class="thumbnail">
+            <img src="pat.jpg" class="thumbnail">
+            <img src="nature.jpg" class="thumbnail">
+        </div>
+        <img src="t.jpg" id="next">
+    </div>
+        </div>
+
+        <script>
+
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+            var thumbnail = document.getElementsByClassName("thumbnail");
+            var mine = document.getElementById("mine");
+
+            var backgroundImg = new Array(
+                "we.jpg",
+                "23.jpg",
+                "pat.jpg",
+                "nature.jpg",
+            );
+                let i = 0;
+            next.onclick = function(){
+
+                if(i < 3){
+                    mine.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+                    thumbnail[i+1].classList.add("active");
+                    thumbnail[i].classList.remove("active");
+                    i++;
+                }
+
+            }
+
+            prev.onclick = function(){
+
+if(i > 0){
+    mine.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+    thumbnail[i-1].classList.add("active");
+    thumbnail[i].classList.remove("active");
+    i--;
+}
+}
+
+         </script>
+
+    </body>
+
+    </html>
+   
